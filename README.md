@@ -49,7 +49,71 @@ The assistant:
 
 ***
 
-## ⚙️ Setup Instructions
+## ⚙️ Setup Instructions (Using uv)
+
+### 1. Install uv (if not already installed)
+
+```bash
+pip install uv
+```
+
+Or via official installer:
+
+```bash
+curl -Ls https://astral.sh/uv/install.sh | sh
+```
+
+***
+
+### 2. Clone the repository
+
+```bash
+git clone https://github.com/your-username/ai-assistant-openai.git
+cd ai-assistant-openai
+```
+
+***
+
+### 3. Install dependencies
+
+Since this project uses `uv`, simply run:
+
+```bash
+uv sync
+```
+
+✅ This will:
+
+* Create a virtual environment automatically
+* Install all dependencies from `pyproject.toml`
+
+***
+
+### 4. Configure environment variables
+
+Create a `.env` file:
+
+```
+OPENAI_API_ENDPOINT=your_api_endpoint
+OPENAI_API_KEY=your_api_key_here
+OPENAI_DEPLOYMENT_MODEL=gpt-4o-mini
+OPENAI_MAX_COMPLETION_TOKENS=150
+OPENAI_TEMPERATURE=0.7
+```
+
+***
+
+### 5. Run the application
+
+```bash
+uv run main.py
+```
+
+***
+
+
+
+## Alternative Setup (pip)
 
 ### 1. Clone the repository
 
